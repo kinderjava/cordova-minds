@@ -9,6 +9,8 @@ var rootdir = process.argv[2];
 
 console.log("Running hook: " + path.basename(process.env.CORDOVA_HOOK));
 
+fs.mkdirSync(path.join(rootdir,"platforms/android/res/raw/"));
+
 var srcfile = path.join(rootdir, "www", "sounds/ringing-2.mp3");
 
 // Define the destination paths for the config.js file for each platform
